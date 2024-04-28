@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.height {
+  height: 1000px;
+}
+
+.left-navbar {
+  width: 800px;
+}

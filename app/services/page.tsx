@@ -1,9 +1,11 @@
-const Shop = () => {
+const Services = () => {
   return (
     <>
-      <div>Shop</div>
+      <div className="min-h-max h-full">
+        <div className="height"></div>
+      </div>
     </>
   );
 };
 
-export default Shop;
+export default Services;
