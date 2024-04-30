@@ -4,15 +4,19 @@
 
 :root {
   --primary-beige: #ffca4b;
-  --primary-purple: #ffcf29;
-  --secondary-gray: 255, 255, 255;
+  --secondary-beige: #ffcf29;
+  --primary-purple: #9235c1;
+  --secondary-purple: #c5a1e0;
+  --secondary-gray: #414649;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-beige: #ffca4b;
+    --secondary-beige: #ffcf29;
+    --primary-purple: #9235c1;
+    --secondary-purple: #c5a1e0;
+    --secondary-gray: #414649;
   }
 }
 
@@ -44,9 +48,9 @@ body {
   margin-top: -120px;
   background-size: cover;
   background: linear-gradient(
-    to bottom,
+    to bottom right,
     var(--primary-beige),
-    var(--primary-purple)
+    var(--secondary-beige)
   );
   z-index: -1;
 }
