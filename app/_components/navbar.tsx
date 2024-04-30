@@ -1,10 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-10 flex justify-between h-28 items-center mx-36 px-4 bg-transparent">
+      <header
+        className={`fixed top-0 left-0 right-0 z-10 flex justify-between h-24 items-center px-40 bg-transparent ${
+          isScrolled ? "" : "navbar"
+        }`}
+      >
         <div className="flex justify-between left-navbar">
           <div className="flex justify-center w-40">
             <Link href={"/"}>

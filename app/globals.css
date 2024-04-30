@@ -9,6 +9,7 @@
   --secondary-purple: #c59fe0;
   --primary-gray: #414649;
   --secondary-gray: #41464a;
+  --primary-orange: #fba682;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
   background: linear-gradient(
     to bottom right,
     var(--primary-beige),
-    var(--secondary-beige)
+    var(--primary-orange)
   );
   z-index: -1;
 }
@@ -45,4 +46,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navbar {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.navbar:hover {
+  background: var(--primary-gray);
 }
