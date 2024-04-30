@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-10 flex justify-between h-24 items-center px-40 bg-transparent ${
-          isScrolled ? "" : "navbar"
+          isScrolled ? "scrolled" : "navbar"
         }`}
       >
         <div className="flex justify-between left-navbar">

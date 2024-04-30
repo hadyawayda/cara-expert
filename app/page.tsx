@@ -9,6 +9,18 @@ export default function Home() {
       <section className="h-96 flex justify-center items-center">
         Hellooo
       </section>
+      <section className="h-96 flex justify-center items-center">
+        Hellooo
+      </section>
+      <section className="h-96 flex justify-center items-center">
+        Hellooo
+      </section>
+      <section className="h-96 flex justify-center items-center">
+        Hellooo
+      </section>
+      <section className="h-96 flex justify-center items-center">
+        Hellooo
+      </section>
     </main>
   );
 }

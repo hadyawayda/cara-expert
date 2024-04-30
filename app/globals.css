@@ -48,14 +48,16 @@ button {
   align-items: center;
 }
 
-.navbar {
+.navbar,
+.scrolled {
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
     backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 400ms;
 }
 
-.navbar:hover {
+.navbar:hover,
+.scrolled {
   background: var(--primary-gray);
 }
