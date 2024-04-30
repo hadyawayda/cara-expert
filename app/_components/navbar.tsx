@@ -22,15 +22,15 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-10 flex justify-between h-24 items-center px-40 bg-transparent ${
-          isScrolled ? "scrolled" : "navbar"
+        className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 bg-transparent transition ${
+          isScrolled ? "scrolled h-16" : "navbar h-24"
         }`}
       >
         <div className="flex justify-between left-navbar">
           <div className="flex justify-center w-40">
             <Link href={"/"}>
               <Image
-                src="./cara-logo.svg"
+                src={`${isScrolled ? "./caraLogo.svg" : "./caraLogo1.svg"}`}
                 width={200}
                 height={120}
                 alt="Logo"

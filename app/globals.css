@@ -7,7 +7,7 @@
   --secondary-beige: #ffcf29;
   --primary-purple: #9235c1;
   --secondary-purple: #c59fe0;
-  --primary-gray: #414649;
+  --primary-gray: #212121;
   --secondary-gray: #41464a;
   --primary-orange: #fba682;
 }
@@ -49,10 +49,9 @@ button {
 }
 
 .navbar,
-.scrolled {
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
-    backdrop-filter;
+.scrolled,
+a {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 400ms;
 }
@@ -60,4 +59,8 @@ button {
 .navbar:hover,
 .scrolled {
   background: var(--primary-gray);
+}
+
+a:hover {
+  color: var(--primary-beige);
 }
