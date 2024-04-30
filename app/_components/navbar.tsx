@@ -42,7 +42,9 @@ const Navbar = () => {
             <Link href={"/"}>
               <Image
                 src={`${
-                  isScrolled || isHover ? "./caraLogo.svg" : "./caraLogo1.svg"
+                  isScrolled || isHover
+                    ? "./icons/caraLogo.svg"
+                    : "./icons/caraLogo1.svg"
                 }`}
                 width={200}
                 height={120}
@@ -51,12 +53,12 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <div className="flex justify-between menu-box text-sm">
-            <Link href={"/explore"}>EXPLORE</Link>
-            <Link href={"/services"}>SERVICES</Link>
-            <Link href={"/products"}>PRODUCTS</Link>
-            <Link href={"/loyalty"}>LOYALTY</Link>
-            <Link href={"/about"}>ABOUT</Link>
+          <div className="flex justify-between menu-box text-base">
+            <Link href={"/explore"}>Explore</Link>
+            <Link href={"/services"}>Services</Link>
+            <Link href={"/products"}>Products</Link>
+            <Link href={"/loyalty"}>Loyalty</Link>
+            <Link href={"/about"}>About</Link>
           </div>
         </div>
         <div className="flex justify-between w-60">
@@ -67,7 +69,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./facebook.svg"
+                src="./icons/facebook.svg"
                 width={100}
                 height={120}
                 alt="facebook"
@@ -79,7 +81,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./instagram.svg"
+                src="./icons/instagram.svg"
                 width={100}
                 height={140}
                 alt="instagram"
@@ -91,7 +93,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./linkedin.svg"
+                src="./icons/linkedin.svg"
                 width={120}
                 height={180}
                 alt="linkedin"
@@ -100,13 +102,28 @@ const Navbar = () => {
           </div>
           <div className="flex justify-between w-24">
             <button>
-              <Image src="./search.svg" width={16} height={180} alt="search" />
+              <Image
+                src="./icons/search.svg"
+                width={16}
+                height={180}
+                alt="search"
+              />
             </button>
             <button>
-              <Image src="./bag1.svg" width={18} height={180} alt="cart" />
+              <Image
+                src="./icons/bag1.svg"
+                width={18}
+                height={180}
+                alt="cart"
+              />
             </button>
             <button>
-              <Image src="./user3.svg" width={16} height={180} alt="login" />
+              <Image
+                src="./icons/user3.svg"
+                width={16}
+                height={180}
+                alt="login"
+              />
             </button>
           </div>
         </div>
