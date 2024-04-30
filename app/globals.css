@@ -6,31 +6,15 @@
   --primary-beige: #ffca4b;
   --secondary-beige: #ffcf29;
   --primary-purple: #9235c1;
-  --secondary-purple: #c5a1e0;
-  --secondary-gray: #414649;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-beige: #ffca4b;
-    --secondary-beige: #ffcf29;
-    --primary-purple: #9235c1;
-    --secondary-purple: #c5a1e0;
-    --secondary-gray: #414649;
-  }
+  --secondary-purple: #c59fe0;
+  --primary-gray: #414649;
+  --secondary-gray: #41464a;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background-color: white;
   color: white;
   overflow-x: hidden;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 .height {
