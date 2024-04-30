@@ -64,3 +64,11 @@ a {
 a:hover {
   color: var(--primary-beige);
 }
+
+.menu-box {
+  width: 440px;
+}
+
+.logo-box {
+  width: 72px;
+}
