@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-beige: #ffca4b;
+  --primary-purple: #ffcf29;
+  --secondary-gray: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: white;
+  color: white;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -38,4 +35,26 @@ body {
 
 .left-navbar {
   width: 800px;
+}
+
+.top-container {
+  height: 600px;
+  width: 100vw;
+  margin: 0;
+  margin-top: -120px;
+  background-size: cover;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-beige),
+    var(--primary-purple)
+  );
+  z-index: -1;
+}
+
+a,
+button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

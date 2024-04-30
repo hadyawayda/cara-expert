@@ -1,27 +1,40 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <>
-      <header className="flex justify-between h-28 items-center mx-36 px-4">
+      <header className="fixed top-0 left-0 right-0 z-10 flex justify-between h-28 items-center mx-36 px-4 bg-transparent">
         <div className="flex justify-between left-navbar">
-          <div className="flex justify-center w-20">Logo</div>
+          <div className="flex justify-center w-40">
+            <Link href={"/"}>
+              <Image
+                src="./cara-logo.svg"
+                width={200}
+                height={120}
+                alt="Logo"
+                className="text-white"
+              />
+            </Link>
+          </div>
           <div className="flex justify-between w-96">
-            <div>Explore</div>
-            <div>Services</div>
-            <div>Products</div>
-            <div>Loyalty</div>
-            <div>About</div>
+            <Link href={"/explore"}>Explore</Link>
+            <Link href={"/services"}>Services</Link>
+            <Link href={"/products"}>Products</Link>
+            <Link href={"/loyalty"}>Loyalty</Link>
+            <Link href={"/about"}>About</Link>
           </div>
         </div>
-        <div className="flex justify-between w-44">
+        <div className="flex justify-between w-52">
           <div className="flex justify-between w-16">
-            <div>f</div>
-            <div>I</div>
-            <div>in</div>
+            <Link href={"/"}>f</Link>
+            <Link href={"/"}>I</Link>
+            <Link href={"/"}>in</Link>
           </div>
           <div className="flex justify-between w-20">
-            <div>S</div>
-            <div>C</div>
-            <div>L</div>
+            <button>S</button>
+            <button>C</button>
+            <button>L</button>
           </div>
         </div>
       </header>
