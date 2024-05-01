@@ -100,7 +100,7 @@ a:hover {
 .text-animation span {
   display: inline-block;
   opacity: 0;
-  animation: fade-in 0.4s forwards;
+  animation: fade-in 0.35s forwards;
   transform: translateY(20px);
   animation-delay: var(--delay);
 }

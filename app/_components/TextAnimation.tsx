@@ -20,12 +20,12 @@ const TextAnimation = () => {
     word.split("").forEach((char, i) => {
       setTimeout(() => {
         setCharacters((prev) => [...prev, char]);
-      }, i * 150);
+      }, i * 100);
     });
 
     const timer = setTimeout(() => {
       setIndex((index + 1) % words.length);
-    }, word.length * 150 + 3000);
+    }, word.length * 100 + 3000);
 
     return () => clearTimeout(timer);
   }, [index, words]);
