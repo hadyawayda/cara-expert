@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Navbar = ({ isRoot }: { isRoot: boolean }) => {
+  console.log(isRoot);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
@@ -29,11 +30,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
   };
 
   return (
-    <>
+    <div>
       <header
-        className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 ${
-          isRoot ? "bg-transparent" : null
-        } transition ${isScrolled ? "scrolled h-16" : "navbar h-24"}`}
+        className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 transition ${
+          !isRoot ? "bg-transparent" : "bg-pink-700"
+        } ${isScrolled ? "scrolled h-16" : "navbar h-24"}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -128,7 +129,8 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
           </div>
         </div>
       </header>
-    </>
+      {isRoot ? <div className="background-image"></div> : null}
+    </div>
   );
 };
 

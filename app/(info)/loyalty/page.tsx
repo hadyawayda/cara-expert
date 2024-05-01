@@ -1,7 +1,7 @@
 const Loyalty = () => {
   return (
     <>
-      <div>Hello!</div>
+      <div>Loyalty</div>
     </>
   );
 };

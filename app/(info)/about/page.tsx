@@ -1,11 +1,7 @@
-"use client";
-
-import TextAnimation from "../../_components/TextAnimation";
-
 const About = () => {
   return (
     <>
-      <TextAnimation />
+      <div>About</div>
     </>
   );
 };
