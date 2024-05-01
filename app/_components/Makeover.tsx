@@ -23,7 +23,7 @@ const Makeover = () => {
             width={500}
             height={500}
             alt="model"
-            className="rounded-2xl"
+            className="rounded-2xl mt-16"
           />
         </div>
       </section>

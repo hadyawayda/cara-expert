@@ -15,23 +15,32 @@ const TextAnimation = () => {
 
   useEffect(() => {
     const word = words[index].name;
-    setCharacters([]);
+    let newCharacters: string[] = [];
 
     word.split("").forEach((char, i) => {
       setTimeout(() => {
-        setCharacters((prev) => [...prev, char]);
+        newCharacters.push(char);
+        setCharacters([...newCharacters]);
       }, i * 100);
     });
 
     const timer = setTimeout(() => {
-      setIndex((index + 1) % words.length);
-    }, word.length * 100 + 3000);
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, word.length * 350 + 1500);
 
-    return () => clearTimeout(timer);
-  }, [index, words]);
+    return () => {
+      clearTimeout(timer);
+      newCharacters = [];
+    };
+  }, [index]);
 
   return (
-    <div className="text-animation" style={{ width: `${words[index].len}px` }}>
+    <div
+      className="text-animation overflow-hidden break-words h-24 flex items-center p-1"
+      style={{
+        width: `${words[index].len}px`,
+      }}
+    >
       {characters.map((char, i) => (
         <span key={i}>{char}</span>
       ))}
