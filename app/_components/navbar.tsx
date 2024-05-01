@@ -43,8 +43,8 @@ const Navbar = () => {
               <Image
                 src={`${
                   isScrolled || isHover
-                    ? "./icons/caraLogo.svg"
-                    : "./icons/caraLogo1.svg"
+                    ? "./Icons/caraLogo.svg"
+                    : "./Icons/caraLogo1.svg"
                 }`}
                 width={200}
                 height={120}
@@ -69,7 +69,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./icons/facebook.svg"
+                src="./Icons/facebook.svg"
                 width={100}
                 height={120}
                 alt="facebook"
@@ -81,7 +81,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./icons/instagram.svg"
+                src="./Icons/instagram.svg"
                 width={100}
                 height={140}
                 alt="instagram"
@@ -93,7 +93,7 @@ const Navbar = () => {
               target="_blank"
             >
               <Image
-                src="./icons/linkedin.svg"
+                src="./Icons/linkedin.svg"
                 width={120}
                 height={180}
                 alt="linkedin"
@@ -103,7 +103,7 @@ const Navbar = () => {
           <div className="flex justify-between w-24">
             <button>
               <Image
-                src="./icons/search.svg"
+                src="./Icons/search.svg"
                 width={16}
                 height={180}
                 alt="search"
@@ -111,7 +111,7 @@ const Navbar = () => {
             </button>
             <button>
               <Image
-                src="./icons/bag1.svg"
+                src="./Icons/bag1.svg"
                 width={18}
                 height={180}
                 alt="cart"
@@ -119,7 +119,7 @@ const Navbar = () => {
             </button>
             <button>
               <Image
-                src="./icons/user3.svg"
+                src="./Icons/user3.svg"
                 width={16}
                 height={180}
                 alt="login"

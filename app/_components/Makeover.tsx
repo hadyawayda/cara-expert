@@ -53,7 +53,7 @@ const Makeover = () => {
         </div>
         <div className="flex justify-center items-end">
           <Image
-            src="/images/makeup.png"
+            src="/Images/makeup.png"
             width={500}
             height={500}
             alt="model"
