@@ -100,12 +100,16 @@ a:hover {
 .character {
   display: inline-block;
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(20px);
   animation: fadeInMoveUp 0.5s forwards;
 }
 
 @keyframes fadeInMoveUp {
-  100% {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }

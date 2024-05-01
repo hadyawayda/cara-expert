@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Makeover = () => {
@@ -23,13 +24,16 @@ const Makeover = () => {
   }, [currentFeature]);
 
   const animatedCharacters = displayFeature.split("").map((char, index) => (
-    <span
-      key={index}
-      className="character"
-      style={{ animationDelay: `${index * 25}ms` }}
+    <motion.span
+      //   key={index}
+      //   className="character"
+      //   style={{ animationDelay: `${index * 100}ms` }}
+      initial={{ translateY: 20 }}
+      animate={{ translateY: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
     >
       {char}
-    </span>
+    </motion.span>
   ));
 
   return (
