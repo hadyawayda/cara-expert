@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isRoot }: { isRoot: boolean }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
@@ -31,9 +31,9 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 bg-transparent transition ${
-          isScrolled ? "scrolled h-16" : "navbar h-24"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 ${
+          isRoot ? "bg-transparent" : null
+        } transition ${isScrolled ? "scrolled h-16" : "navbar h-24"}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

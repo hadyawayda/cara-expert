@@ -102,11 +102,10 @@ a:hover {
   opacity: 0;
   animation: fade-in 0.35s forwards;
   transform: translateY(20px);
-  animation-delay: var(--delay);
 }
 
 @keyframes fade-in {
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }

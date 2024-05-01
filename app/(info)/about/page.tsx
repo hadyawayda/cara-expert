@@ -1,6 +1,6 @@
 "use client";
 
-import TextAnimation from "../_components/TextAnimation";
+import TextAnimation from "../../_components/TextAnimation";
 
 const About = () => {
   return (
