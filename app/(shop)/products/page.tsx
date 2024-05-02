@@ -1,7 +1,9 @@
 const Products = () => {
   return (
     <>
-      <div>Products</div>
+      <div className="min-h-max h-full">
+        <div className="height"></div>
+      </div>
     </>
   );
 };

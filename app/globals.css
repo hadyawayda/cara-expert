@@ -49,7 +49,6 @@ body {
 
 a,
 button {
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,4 +108,13 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.ground {
+  fill: #fff;
+  stroke: #000;
+}
+
+.black-text {
+  color: var(--primary-gray);
 }

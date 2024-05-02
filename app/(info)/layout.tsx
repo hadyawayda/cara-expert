@@ -14,6 +14,7 @@ export default function InfoLayout({
   return (
     <>
       <Navbar isRoot={true} />
+      <div className="background-image"></div>
       {children}
     </>
   );

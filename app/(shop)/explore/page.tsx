@@ -1,7 +1,9 @@
 const Explore = () => {
   return (
     <>
-      <div>Explore</div>
+      <div className="min-h-max h-full">
+        <div className="height"></div>
+      </div>
     </>
   );
 };

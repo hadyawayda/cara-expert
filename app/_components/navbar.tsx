@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Navbar = ({ isRoot }: { isRoot: boolean }) => {
-  console.log(isRoot);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
@@ -30,10 +29,10 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
   };
 
   return (
-    <div>
+    <>
       <header
         className={`fixed top-0 left-0 right-0 z-10 flex justify-between items-center px-40 transition ${
-          !isRoot ? "bg-transparent" : "bg-pink-700"
+          isRoot ? "text-white" : !(isHover || isScrolled) ? "black-text" : null
         } ${isScrolled ? "scrolled h-16" : "navbar h-24"}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -43,9 +42,9 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
             <Link href={"/"}>
               <Image
                 src={`${
-                  isScrolled || isHover
-                    ? "./Icons/caraLogo.svg"
-                    : "./Icons/caraLogo1.svg"
+                  isRoot && !(isScrolled || isHover)
+                    ? "./Icons/caraLogo1.svg"
+                    : "./Icons/caraLogo.svg"
                 }`}
                 width={200}
                 height={120}
@@ -55,11 +54,21 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
             </Link>
           </div>
           <div className="flex justify-between menu-box text-base">
-            <Link href={"/explore"}>Explore</Link>
-            <Link href={"/services"}>Services</Link>
-            <Link href={"/products"}>Products</Link>
-            <Link href={"/loyalty"}>Loyalty</Link>
-            <Link href={"/about"}>About</Link>
+            <Link className="duration-75" href={"/explore"}>
+              Explore
+            </Link>
+            <Link className="duration-75" href={"/services"}>
+              Services
+            </Link>
+            <Link className="duration-75" href={"/products"}>
+              Products
+            </Link>
+            <Link className="duration-75" href={"/loyalty"}>
+              Loyalty
+            </Link>
+            <Link className="duration-75" href={"/about"}>
+              About
+            </Link>
           </div>
         </div>
         <div className="flex justify-between w-60">
@@ -70,7 +79,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
               target="_blank"
             >
               <Image
-                src="./Icons/facebook.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/facebook.svg"
+                    : "./Icons/facebook1.svg"
+                }
                 width={100}
                 height={120}
                 alt="facebook"
@@ -82,7 +95,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
               target="_blank"
             >
               <Image
-                src="./Icons/instagram.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/instagram.svg"
+                    : "./Icons/instagram1.svg"
+                }
                 width={100}
                 height={140}
                 alt="instagram"
@@ -94,7 +111,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
               target="_blank"
             >
               <Image
-                src="./Icons/linkedin.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/linkedin.svg"
+                    : "./Icons/linkedin1.svg"
+                }
                 width={120}
                 height={180}
                 alt="linkedin"
@@ -104,7 +125,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
           <div className="flex justify-between w-24">
             <button>
               <Image
-                src="./Icons/search.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/search.svg"
+                    : "./Icons/search1.svg"
+                }
                 width={16}
                 height={180}
                 alt="search"
@@ -112,7 +137,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
             </button>
             <button>
               <Image
-                src="./Icons/bag1.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/bag.svg"
+                    : "./Icons/bag1.svg"
+                }
                 width={18}
                 height={180}
                 alt="cart"
@@ -120,7 +149,11 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
             </button>
             <button>
               <Image
-                src="./Icons/user3.svg"
+                src={
+                  isRoot || isHover || isScrolled
+                    ? "./Icons/user.svg"
+                    : "./Icons/user1.svg"
+                }
                 width={16}
                 height={180}
                 alt="login"
@@ -129,8 +162,7 @@ const Navbar = ({ isRoot }: { isRoot: boolean }) => {
           </div>
         </div>
       </header>
-      {isRoot ? <div className="background-image"></div> : null}
-    </div>
+    </>
   );
 };
 
