@@ -22,10 +22,7 @@ body {
   background-color: white;
   color: white;
   overflow-x: hidden;
-}
-
-.height {
-  height: 1000px;
+  font-family: Quicksand;
 }
 
 .left-navbar {
@@ -88,10 +85,6 @@ a:hover {
   color: var(--primary-purple);
 }
 
-.top-container {
-  font-family: Quicksand;
-}
-
 .features-display {
   width: 360px;
 }
@@ -110,11 +103,21 @@ a:hover {
   }
 }
 
-.ground {
-  fill: #fff;
-  stroke: #000;
-}
-
 .black-text {
   color: var(--primary-gray);
+}
+
+.categories {
+  max-width: 70%;
+}
+
+.cara-logo {
+  position: absolute;
+  top: 180px;
+  height: 70vh;
+  width: 100vw;
+  margin: 0;
+  background: url("/Icons/caraLogo.svg") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
 }
